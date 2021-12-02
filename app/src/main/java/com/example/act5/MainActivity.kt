@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.button
+import kotlinx.android.synthetic.main.activity_main.poem
 import android.content.Intent
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -14,8 +15,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         button.setOnClickListener(this)
-        
-        Toast.makeText(this, R.string.strOnCreate,Toast.LENGTH_LONG).show()
+
+        val poemLines: Array<String> = resources.getStringArray(R.array.poem)
+
+        for(line in poemLines)
+        {
+            poem.text = poem.text.toString() + "\n" + line
+        }
+
+        Toast.makeText(this, "onCreate()",Toast.LENGTH_LONG).show()
     }
 
     override fun onStart() {
@@ -46,8 +54,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         Toast.makeText(this, "onClick()",Toast.LENGTH_LONG).show()
-        val intent = Intent(this, ActivityTwo::class.java)
-        startActivity(intent)
+        if (v == button) {
+            val intent = Intent(this, ActivityTwo::class.java)
+            startActivity(intent)
+        }
     }
 
 }

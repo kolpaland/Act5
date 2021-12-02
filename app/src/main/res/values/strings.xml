@@ -1,4 +1,20 @@
 <resources>
-    <string name="app_name">Act5</string>
-    <string name="strOnCreate">Приветствую</string>
+    <string name="app_name">Парус</string>
+    <string name="author">Михаил Лермонтов</string>
+    <string name="poem_name">Парус</string>
+    <string name="year">1832 г.</string>
+    <string-array name="poem">
+        <item>Белеет парус одинокий</item>
+        <item>В тумане моря голубом!..</item>
+        <item>Что ищет он в стране далекой?</item>
+        <item>Что кинул он в краю родном?..</item>
+        <item>Играют волны - ветер свищет,</item>
+        <item>И мачта гнется и скрыпит…</item>
+        <item>Увы! Он счастия не ищет</item>
+        <item>И не от счастия бежит!</item>
+        <item>Под ним струя светлей лазури,</item>
+        <item>Над ним луч солнца золотой…</item>
+        <item>А он, мятежный, просит бури,</item>
+        <item>Как будто в бурях есть покой!</item>
+    </string-array>
 </resources>
